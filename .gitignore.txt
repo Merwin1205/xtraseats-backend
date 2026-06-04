@@ -1,0 +1,19 @@
+# Compiled output
+target/
+
+# Eclipse files
+.classpath
+.project
+.settings/
+.factorypath
+
+# IntelliJ (just in case)
+.idea/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment / secrets (important for real projects)
+# application.properties  ← uncomment this if you ever add real passwords
