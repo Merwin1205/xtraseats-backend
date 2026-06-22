@@ -1,114 +1,62 @@
 package com.xtraseats.dto;
 
-
+import jakarta.validation.constraints.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import java.time.LocalDate;
 
-
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class MovieTicketRequest {
 
-    // Core movie info
+    @NotBlank(message = "Movie name is required")
     private String movieName;
+
+    @NotBlank(message = "Theatre name is required")
     private String theatreName;
+
+    @NotBlank(message = "City is required")
+    private String city;
+
+    @NotBlank(message = "Language is required")
     private String language;
+
+    @NotNull(message = "Show date is required")
+    @FutureOrPresent(message = "Show date cannot be in the past")
     private LocalDate showDate;
+
+    @NotBlank(message = "Show time is required")
     private String showTime;
 
-    // Seat info
+    @NotBlank(message = "Seat numbers are required")
     private String seatNumbers;
+
+    @NotNull(message = "Ticket count is required")
+    @Min(value = 1, message = "At least 1 ticket is required")
+    @Max(value = 10, message = "Maximum 10 tickets per listing")
     private Integer ticketCount;
+
+    @NotNull(message = "Price per seat is required")
+    @Positive(message = "Price must be greater than 0")
     private Double pricePerSeat;
 
-    // Extra info (separate box on the form)
-    private String screenFormat;   // 2D / 3D / IMAX / 4DX / ICE / Dolby Atmos
-    private String screenNumber;
+    @NotBlank(message = "Screen format is required")
+    private String screenFormat;
+
+    private String screenNumber; // optional — no validation needed
+
+    @Size(max = 500, message = "Extra info cannot exceed 500 characters")
     private String extraInfo;
 
-    // Seller info
+    @NotBlank(message = "Seller name is required")
     private String sellerName;
-    private String sellerContact;  // Stored in DB, never returned publicly
+
+    @NotBlank(message = "Seller contact is required")
+    @Pattern(regexp = "^[6-9]\\d{9}$", message = "Enter a valid 10-digit Indian mobile number")
+    private String sellerContact;
+
+    @Size(max = 300, message = "Seller note cannot exceed 300 characters")
     private String sellerNote;
-	public String getMovieName() {
-		return movieName;
-	}
-	public void setMovieName(String movieName) {
-		this.movieName = movieName;
-	}
-	public String getTheatreName() {
-		return theatreName;
-	}
-	public void setTheatreName(String theatreName) {
-		this.theatreName = theatreName;
-	}
-	public String getLanguage() {
-		return language;
-	}
-	public void setLanguage(String language) {
-		this.language = language;
-	}
-	public LocalDate getShowDate() {
-		return showDate;
-	}
-	public void setShowDate(LocalDate showDate) {
-		this.showDate = showDate;
-	}
-	public String getShowTime() {
-		return showTime;
-	}
-	public void setShowTime(String showTime) {
-		this.showTime = showTime;
-	}
-	public String getSeatNumbers() {
-		return seatNumbers;
-	}
-	public void setSeatNumbers(String seatNumbers) {
-		this.seatNumbers = seatNumbers;
-	}
-	public Integer getTicketCount() {
-		return ticketCount;
-	}
-	public void setTicketCount(Integer ticketCount) {
-		this.ticketCount = ticketCount;
-	}
-	public Double getPricePerSeat() {
-		return pricePerSeat;
-	}
-	public void setPricePerSeat(Double pricePerSeat) {
-		this.pricePerSeat = pricePerSeat;
-	}
-	public String getScreenFormat() {
-		return screenFormat;
-	}
-	public void setScreenFormat(String screenFormat) {
-		this.screenFormat = screenFormat;
-	}
-	public String getScreenNumber() {
-		return screenNumber;
-	}
-	public void setScreenNumber(String screenNumber) {
-		this.screenNumber = screenNumber;
-	}
-	public String getExtraInfo() {
-		return extraInfo;
-	}
-	public void setExtraInfo(String extraInfo) {
-		this.extraInfo = extraInfo;
-	}
-	public String getSellerName() {
-		return sellerName;
-	}
-	public void setSellerName(String sellerName) {
-		this.sellerName = sellerName;
-	}
-	public String getSellerContact() {
-		return sellerContact;
-	}
-	public void setSellerContact(String sellerContact) {
-		this.sellerContact = sellerContact;
-	}
-	public String getSellerNote() {
-		return sellerNote;
-	}
-	public void setSellerNote(String sellerNote) {
-		this.sellerNote = sellerNote;
-	}
 }

@@ -1,48 +1,44 @@
 package com.xtraseats.service;
+
 import com.xtraseats.dto.PaymentRequest;
-import com.xtraseats.dto.RegisterRequest;
 import com.xtraseats.entity.User;
+import com.xtraseats.exception.UserNotFoundException;
 import com.xtraseats.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
+
 import java.time.LocalDateTime;
+
 @Service
+@RequiredArgsConstructor
 public class UserService {
-    @Autowired
-    private UserRepository userRepo;
-    // ── POST /api/users/register ─────────────────────────────
-    public User register(RegisterRequest req) {
-        if (userRepo.findByEmail(req.getEmail()).isPresent()) {
-            throw new RuntimeException("Email already registered.");
-        }
-        User user = new User();
-        user.setName(req.getName());
-        user.setEmail(req.getEmail());
-        user.setPhone(req.getPhone());
-        user.setSubscribed(false);
-        return userRepo.save(user);
-    }
-    // ── GET /api/users/{id} ──────────────────────────────────
+
+    private static final Logger log = LoggerFactory.getLogger(UserService.class);
+    private final UserRepository userRepo;
+
     public User getUserById(Long id) {
+        log.info("Fetching user — id: {}", id);
         return userRepo.findById(id)
-                .orElseThrow(() -> new RuntimeException("User not found: " + id));
+                .orElseThrow(() -> new UserNotFoundException(id));
     }
-    // ── POST /api/payment ────────────────────────────────────
-    // Mock payment — sets isSubscribed = true
+
+    // User must already be registered & logged in — payment just flips the flag
     public User processPayment(PaymentRequest req) {
-        // Find existing user by email, or create new
-        User user = userRepo.findByEmail(req.getEmail()).orElse(null);
+        log.info("Processing Rs.30 payment — userId: {}", req.getUserId());
 
-        if (user == null) {
-            user = new User();
-            user.setName(req.getName());
-            user.setEmail(req.getEmail());
-            user.setPhone(req.getPhone());
-        }
+        User user = userRepo.findById(req.getUserId())
+                .orElseThrow(() -> {
+                    log.warn("Payment failed — user not found: {}", req.getUserId());
+                    return new UserNotFoundException(req.getUserId());
+                });
 
-        // Mock: no real payment — just mark subscribed
         user.setSubscribed(true);
         user.setSubscribedAt(LocalDateTime.now());
-        return userRepo.save(user);
+
+        User saved = userRepo.save(user);
+        log.info("Payment complete — user id: {} is now subscribed", saved.getId());
+        return saved;
     }
 }

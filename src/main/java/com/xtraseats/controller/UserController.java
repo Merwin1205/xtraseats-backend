@@ -1,38 +1,25 @@
 package com.xtraseats.controller;
 
-import com.xtraseats.dto.RegisterRequest;
 import com.xtraseats.entity.User;
 import com.xtraseats.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/users")
 @CrossOrigin(origins = "http://localhost:5173")
+@RequiredArgsConstructor
 public class UserController {
 
-    @Autowired
-    private UserService userService;
+    private static final Logger log = LoggerFactory.getLogger(UserController.class);
+    private final UserService userService;
 
-    // POST /api/users/register
-    @PostMapping("/register")
-    public ResponseEntity<?> register(@RequestBody RegisterRequest request) {
-        try {
-            User user = userService.register(request);
-            return ResponseEntity.ok(user);
-        } catch (RuntimeException e) {
-            return ResponseEntity.badRequest().body(e.getMessage());
-        }
-    }
-
-    // GET /api/users/{id}
     @GetMapping("/{id}")
-    public ResponseEntity<?> getUser(@PathVariable Long id) {
-        try {
-            return ResponseEntity.ok(userService.getUserById(id));
-        } catch (RuntimeException e) {
-            return ResponseEntity.notFound().build();
-        }
+    public ResponseEntity<User> getUser(@PathVariable Long id) {
+        log.debug("GET /api/users/{}", id);
+        return ResponseEntity.ok(userService.getUserById(id));
     }
 }

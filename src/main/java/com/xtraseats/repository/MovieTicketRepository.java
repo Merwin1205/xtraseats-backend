@@ -6,18 +6,13 @@ import java.util.List;
 
 public interface MovieTicketRepository extends JpaRepository<MovieTicket, Long> {
 
-    // All active listings
     List<MovieTicket> findByActiveTrue();
 
-    // Search by movie name (case-insensitive)
+    // ★ NEW — powers the city filter
+    List<MovieTicket> findByCityAndActiveTrue(String city);
+
     List<MovieTicket> findByMovieNameContainingIgnoreCaseAndActiveTrue(String movieName);
-
-    // Filter by language
     List<MovieTicket> findByLanguageAndActiveTrue(String language);
-
-    // Filter by screen format (2D / 3D etc.)
     List<MovieTicket> findByScreenFormatAndActiveTrue(String screenFormat);
-
-    // Filter by theatre
     List<MovieTicket> findByTheatreNameContainingIgnoreCaseAndActiveTrue(String theatreName);
 }

@@ -2,59 +2,51 @@ package com.xtraseats.controller;
 
 import com.xtraseats.dto.*;
 import com.xtraseats.service.MovieTicketService;
-import org.springframework.beans.factory.annotation.Autowired;
+import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
 
 @RestController
 @RequestMapping("/api/tickets")
 @CrossOrigin(origins = "http://localhost:5173")
+@RequiredArgsConstructor
 public class MovieTicketController {
 
-    @Autowired
-    private MovieTicketService ticketService;
+    private static final Logger log = LoggerFactory.getLogger(MovieTicketController.class);
+    private final MovieTicketService ticketService;
 
-    // GET /api/tickets — all listings, no contact
+    // city is optional — /api/tickets returns everything, /api/tickets?city=Chennai filters
     @GetMapping
-    public ResponseEntity<List<MovieTicketResponse>> getAllTickets() {
+    public ResponseEntity<List<MovieTicketResponse>> getAllTickets(
+            @RequestParam(required = false) String city) {
+        log.debug("GET /api/tickets — city filter: {}", city);
+        if (city != null && !city.isBlank()) {
+            return ResponseEntity.ok(ticketService.getTicketsByCity(city));
+        }
         return ResponseEntity.ok(ticketService.getAllTickets());
     }
 
-    // GET /api/tickets/{id} — single ticket, no contact
     @GetMapping("/{id}")
-    public ResponseEntity<?> getTicketById(@PathVariable Long id) {
-        try {
-            return ResponseEntity.ok(ticketService.getTicketById(id));
-        } catch (RuntimeException e) {
-            return ResponseEntity.notFound().build();
-        }
+    public ResponseEntity<MovieTicketResponse> getTicketById(@PathVariable Long id) {
+        log.debug("GET /api/tickets/{}", id);
+        return ResponseEntity.ok(ticketService.getTicketById(id));
     }
 
-    // POST /api/tickets — seller posts a ticket
     @PostMapping
-    public ResponseEntity<?> postTicket(@RequestBody MovieTicketRequest request) {
-        try {
-            return ResponseEntity.ok(ticketService.postTicket(request));
-        } catch (RuntimeException e) {
-            return ResponseEntity.badRequest().body(e.getMessage());
-        }
+    public ResponseEntity<MovieTicketResponse> postTicket(@Valid @RequestBody MovieTicketRequest request) {
+        log.debug("POST /api/tickets — movie: {}", request.getMovieName());
+        return ResponseEntity.status(HttpStatus.CREATED).body(ticketService.postTicket(request));
     }
 
-    // GET /api/tickets/{id}/contact?userId={userId}
-    // ⭐ Subscription-gated — 403 if not subscribed
     @GetMapping("/{id}/contact")
-    public ResponseEntity<?> getContact(
-            @PathVariable Long id,
-            @RequestParam Long userId) {
-        try {
-            ContactResponse contact = ticketService.getContact(id, userId);
-            return ResponseEntity.ok(contact);
-        } catch (RuntimeException e) {
-            if (e.getMessage().startsWith("NOT_SUBSCRIBED")) {
-                return ResponseEntity.status(403).body(e.getMessage());
-            }
-            return ResponseEntity.notFound().build();
-        }
+    public ResponseEntity<ContactResponse> getContact(@PathVariable Long id, @RequestParam Long userId) {
+        log.debug("GET /api/tickets/{}/contact — userId: {}", id, userId);
+        return ResponseEntity.ok(ticketService.getContact(id, userId));
     }
 }

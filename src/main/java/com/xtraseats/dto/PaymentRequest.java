@@ -1,39 +1,22 @@
 package com.xtraseats.dto;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class PaymentRequest {
-    private String name;
-    private String phone;
-    private String email;
-    private Double amount;   // Must be 30.0
-    private String upiId;    // Mock — not actually processed
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public String getPhone() {
-		return phone;
-	}
-	public void setPhone(String phone) {
-		this.phone = phone;
-	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	public Double getAmount() {
-		return amount;
-	}
-	public void setAmount(Double amount) {
-		this.amount = amount;
-	}
-	public String getUpiId() {
-		return upiId;
-	}
-	public void setUpiId(String upiId) {
-		this.upiId = upiId;
-	}
+
+    @NotNull(message = "User ID is required — please log in first")
+    private Long userId;
+
+    @NotNull(message = "Amount is required")
+    private Double amount;
+
+    @NotBlank(message = "UPI ID is required")
+    private String upiId;
 }

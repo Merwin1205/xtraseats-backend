@@ -1,0 +1,2156 @@
+2026-06-22 07:32:50 [WARN ] c.z.h.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9h30m56s584ms394µs500ns).
+2026-06-22 07:35:18 [INFO ] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2026-06-22 07:35:18 [INFO ] o.s.b.t.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-22 07:35:18 [INFO ] o.s.b.t.GracefulShutdown - Graceful shutdown complete
+2026-06-22 07:35:18 [INFO ] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-22 07:35:18 [INFO ] c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-06-22 07:35:18 [INFO ] c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-06-22 07:35:21 [INFO ] c.x.XtraseatsBackendApplication - Starting XtraseatsBackendApplication using Java 21.0.7 with PID 24428 (F:\xtraseats-backend\xtraseats-backend\target\classes started by Kumar M in F:\xtraseats-backend\xtraseats-backend)
+2026-06-22 07:35:21 [DEBUG] c.x.XtraseatsBackendApplication - Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-06-22 07:35:21 [INFO ] c.x.XtraseatsBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-22 07:35:21 [INFO ] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-22 07:35:21 [INFO ] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-22 07:35:22 [INFO ] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-22 07:35:22 [INFO ] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 48 ms. Found 2 JPA repository interfaces.
+2026-06-22 07:35:22 [INFO ] o.s.b.t.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-06-22 07:35:22 [INFO ] o.a.c.c.StandardService - Starting service [Tomcat]
+2026-06-22 07:35:22 [INFO ] o.a.c.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-06-22 07:35:23 [INFO ] o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1404 ms
+2026-06-22 07:35:23 [INFO ] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-22 07:35:23 [INFO ] org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-06-22 07:35:23 [INFO ] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-22 07:35:23 [INFO ] c.z.h.HikariDataSource - HikariPool-1 - Starting...
+2026-06-22 07:35:24 [INFO ] c.z.h.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3e45492
+2026-06-22 07:35:24 [INFO ] c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+2026-06-22 07:35:24 [INFO ] o.h.o.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/xtraseats_db?useSSL=false&serverTimezone=Asia/Kolkata&allowPublicKeyRetrieval=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 9.1
+	Default catalog/schema: xtraseats_db/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-22 07:35:25 [INFO ] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-22 07:35:25 [INFO ] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-22 07:35:25 [INFO ] o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-22 07:35:25 [WARN ] o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-22 07:35:26 [INFO ] o.s.b.t.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2026-06-22 07:35:26 [INFO ] c.x.XtraseatsBackendApplication - Started XtraseatsBackendApplication in 5.079 seconds (process running for 5.982)
+2026-06-22 07:35:38 [INFO ] o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-22 07:35:38 [INFO ] o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-06-22 07:35:38 [INFO ] o.s.w.s.DispatcherServlet - Completed initialization in 5 ms
+2026-06-22 07:35:38 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets — city filter: null
+2026-06-22 07:35:38 [INFO ] c.x.s.MovieTicketService - Fetching all active tickets
+2026-06-22 07:35:39 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.active=true
+2026-06-22 07:35:39 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets — city filter: null
+2026-06-22 07:35:39 [INFO ] c.x.s.MovieTicketService - Fetching all active tickets
+2026-06-22 07:35:39 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.active=true
+2026-06-22 07:36:13 [INFO ] c.x.service.AuthService - Login attempt — username: Merwin
+2026-06-22 07:36:14 [DEBUG] org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.name,
+        u1_0.password,
+        u1_0.is_subscribed,
+        u1_0.subscribed_at,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-06-22 07:36:14 [WARN ] c.x.service.AuthService - Login failed — no such username: Merwin
+2026-06-22 07:36:14 [WARN ] c.x.e.GlobalExceptionHandler - Login failed — Invalid username or password.
+2026-06-22 07:36:14 [WARN ] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.xtraseats.exception.InvalidCredentialsException: Invalid username or password.]
+2026-06-22 07:36:30 [WARN ] c.x.e.GlobalExceptionHandler - Validation failed — {password=Password must be at least 6 characters}
+2026-06-22 07:36:30 [WARN ] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> com.xtraseats.controller.AuthController.register(com.xtraseats.dto.RegisterRequest): [Field error in object 'registerRequest' on field 'password': rejected value [M@123]; codes [Size.registerRequest.password,Size.password,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [registerRequest.password,password]; arguments []; default message [password],2147483647,6]; default message [Password must be at least 6 characters]] ]
+2026-06-22 07:36:34 [INFO ] c.x.service.AuthService - Register attempt — username: Merwin
+2026-06-22 07:36:34 [DEBUG] org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.username=? 
+    limit
+        ?
+2026-06-22 07:36:34 [DEBUG] org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (created_at, name, password, is_subscribed, subscribed_at, username) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-06-22 07:36:34 [INFO ] c.x.service.AuthService - User registered — id: 2, username: Merwin
+2026-06-22 07:36:35 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets — city filter: null
+2026-06-22 07:36:35 [INFO ] c.x.s.MovieTicketService - Fetching all active tickets
+2026-06-22 07:36:36 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.active=true
+2026-06-22 07:36:36 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets — city filter: null
+2026-06-22 07:36:36 [INFO ] c.x.s.MovieTicketService - Fetching all active tickets
+2026-06-22 07:36:36 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.active=true
+2026-06-22 07:38:39 [DEBUG] c.x.c.MovieTicketController - POST /api/tickets — movie: Backrooms
+2026-06-22 07:38:39 [INFO ] c.x.s.MovieTicketService - Posting ticket — movie: 'Backrooms', city: 'Chennai', theatre: 'PVR '
+2026-06-22 07:38:39 [DEBUG] org.hibernate.SQL - 
+    insert 
+    into
+        movie_tickets
+        (active, city, extra_info, language, movie_name, posted_at, price_per_seat, screen_format, screen_number, seat_numbers, seller_contact, seller_name, seller_note, show_date, show_time, theatre_name, ticket_count) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-06-22 07:38:39 [INFO ] c.x.s.MovieTicketService - Ticket posted successfully — id: 1
+2026-06-22 07:38:41 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets — city filter: null
+2026-06-22 07:38:41 [INFO ] c.x.s.MovieTicketService - Fetching all active tickets
+2026-06-22 07:38:41 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.active=true
+2026-06-22 07:38:41 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets — city filter: null
+2026-06-22 07:38:41 [INFO ] c.x.s.MovieTicketService - Fetching all active tickets
+2026-06-22 07:38:41 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.active=true
+2026-06-22 07:39:27 [INFO ] c.x.service.AuthService - Register attempt — username: Thams
+2026-06-22 07:39:27 [DEBUG] org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.username=? 
+    limit
+        ?
+2026-06-22 07:39:28 [DEBUG] org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (created_at, name, password, is_subscribed, subscribed_at, username) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-06-22 07:39:28 [INFO ] c.x.service.AuthService - User registered — id: 3, username: Thams
+2026-06-22 07:39:29 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets — city filter: null
+2026-06-22 07:39:29 [INFO ] c.x.s.MovieTicketService - Fetching all active tickets
+2026-06-22 07:39:29 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.active=true
+2026-06-22 07:39:29 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets — city filter: null
+2026-06-22 07:39:29 [INFO ] c.x.s.MovieTicketService - Fetching all active tickets
+2026-06-22 07:39:29 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.active=true
+2026-06-22 07:39:33 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets — city filter: Coimbatore
+2026-06-22 07:39:33 [INFO ] c.x.s.MovieTicketService - Fetching tickets for city: Coimbatore
+2026-06-22 07:39:33 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.city=? 
+        and mt1_0.active=true
+2026-06-22 07:39:35 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets — city filter: Chennai
+2026-06-22 07:39:35 [INFO ] c.x.s.MovieTicketService - Fetching tickets for city: Chennai
+2026-06-22 07:39:35 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.city=? 
+        and mt1_0.active=true
+2026-06-22 07:39:42 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets/1
+2026-06-22 07:39:42 [INFO ] c.x.s.MovieTicketService - Fetching ticket id: 1
+2026-06-22 07:39:42 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.id=?
+2026-06-22 07:39:42 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets/1
+2026-06-22 07:39:42 [INFO ] c.x.s.MovieTicketService - Fetching ticket id: 1
+2026-06-22 07:39:42 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.id=?
+2026-06-22 07:40:05 [DEBUG] c.x.c.PaymentController - POST /api/payment — userId: 3, amount: 30.0
+2026-06-22 07:40:05 [INFO ] c.x.service.UserService - Processing Rs.30 payment — userId: 3
+2026-06-22 07:40:05 [DEBUG] org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.name,
+        u1_0.password,
+        u1_0.is_subscribed,
+        u1_0.subscribed_at,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-06-22 07:40:05 [DEBUG] org.hibernate.SQL - 
+    update
+        users 
+    set
+        created_at=?,
+        name=?,
+        password=?,
+        is_subscribed=?,
+        subscribed_at=?,
+        username=? 
+    where
+        id=?
+2026-06-22 07:40:05 [INFO ] c.x.service.UserService - Payment complete — user id: 3 is now subscribed
+2026-06-22 07:40:07 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets/1
+2026-06-22 07:40:07 [INFO ] c.x.s.MovieTicketService - Fetching ticket id: 1
+2026-06-22 07:40:07 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.id=?
+2026-06-22 07:40:07 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets/1
+2026-06-22 07:40:07 [INFO ] c.x.s.MovieTicketService - Fetching ticket id: 1
+2026-06-22 07:40:07 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.id=?
+2026-06-22 07:40:07 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets/1/contact — userId: 3
+2026-06-22 07:40:07 [INFO ] c.x.s.MovieTicketService - Contact request — ticket: 1, user: 3
+2026-06-22 07:40:07 [DEBUG] org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.name,
+        u1_0.password,
+        u1_0.is_subscribed,
+        u1_0.subscribed_at,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-06-22 07:40:07 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.id=?
+2026-06-22 07:40:07 [INFO ] c.x.s.MovieTicketService - Contact revealed — ticket: 1 to user: 3
+2026-06-22 07:40:07 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets/1/contact — userId: 3
+2026-06-22 07:40:07 [INFO ] c.x.s.MovieTicketService - Contact request — ticket: 1, user: 3
+2026-06-22 07:40:07 [DEBUG] org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.name,
+        u1_0.password,
+        u1_0.is_subscribed,
+        u1_0.subscribed_at,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-06-22 07:40:07 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.id=?
+2026-06-22 07:40:07 [INFO ] c.x.s.MovieTicketService - Contact revealed — ticket: 1 to user: 3
+2026-06-22 07:40:11 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets — city filter: null
+2026-06-22 07:40:11 [INFO ] c.x.s.MovieTicketService - Fetching all active tickets
+2026-06-22 07:40:11 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.active=true
+2026-06-22 07:40:11 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets — city filter: null
+2026-06-22 07:40:11 [INFO ] c.x.s.MovieTicketService - Fetching all active tickets
+2026-06-22 07:40:11 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.active=true
+2026-06-22 08:06:59 [INFO ] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2026-06-22 08:06:59 [INFO ] o.s.b.t.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-22 08:06:59 [INFO ] o.s.b.t.GracefulShutdown - Graceful shutdown complete
+2026-06-22 08:06:59 [INFO ] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-22 08:06:59 [INFO ] c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-06-22 08:06:59 [INFO ] c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-06-22 10:33:30 [INFO ] c.x.XtraseatsBackendApplication - Starting XtraseatsBackendApplication using Java 21.0.7 with PID 25768 (F:\xtraseats-backend\xtraseats-backend\target\classes started by Kumar M in F:\xtraseats-backend\xtraseats-backend)
+2026-06-22 10:33:30 [DEBUG] c.x.XtraseatsBackendApplication - Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-06-22 10:33:30 [INFO ] c.x.XtraseatsBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-22 10:33:30 [INFO ] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-22 10:33:30 [INFO ] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-22 10:33:32 [INFO ] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-22 10:33:32 [INFO ] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 63 ms. Found 2 JPA repository interfaces.
+2026-06-22 10:33:33 [INFO ] o.s.b.t.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-06-22 10:33:33 [INFO ] o.a.c.c.StandardService - Starting service [Tomcat]
+2026-06-22 10:33:33 [INFO ] o.a.c.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-06-22 10:33:33 [INFO ] o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2364 ms
+2026-06-22 10:33:33 [INFO ] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-22 10:33:33 [INFO ] org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-06-22 10:33:34 [INFO ] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-22 10:33:34 [INFO ] c.z.h.HikariDataSource - HikariPool-1 - Starting...
+2026-06-22 10:33:34 [INFO ] c.z.h.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@74596ec2
+2026-06-22 10:33:34 [INFO ] c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+2026-06-22 10:33:35 [INFO ] o.h.o.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/xtraseats_db?useSSL=false&serverTimezone=Asia/Kolkata&allowPublicKeyRetrieval=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 9.1
+	Default catalog/schema: xtraseats_db/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-22 10:33:37 [INFO ] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-22 10:33:37 [INFO ] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-22 10:33:37 [INFO ] o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-22 10:33:37 [WARN ] o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-22 10:33:38 [INFO ] o.s.b.t.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2026-06-22 10:33:38 [INFO ] c.x.XtraseatsBackendApplication - Started XtraseatsBackendApplication in 8.063 seconds (process running for 9.137)
+2026-06-22 10:34:01 [INFO ] o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-22 10:34:01 [INFO ] o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-06-22 10:34:01 [INFO ] o.s.w.s.DispatcherServlet - Completed initialization in 4 ms
+2026-06-22 10:34:01 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets — city filter: null
+2026-06-22 10:34:01 [INFO ] c.x.s.MovieTicketService - Fetching all active tickets
+2026-06-22 10:34:02 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.active=true
+2026-06-22 10:34:02 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets — city filter: null
+2026-06-22 10:34:02 [INFO ] c.x.s.MovieTicketService - Fetching all active tickets
+2026-06-22 10:34:02 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.active=true
+2026-06-22 10:34:18 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets/1
+2026-06-22 10:34:18 [INFO ] c.x.s.MovieTicketService - Fetching ticket id: 1
+2026-06-22 10:34:18 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.id=?
+2026-06-22 10:34:18 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets/1
+2026-06-22 10:34:18 [INFO ] c.x.s.MovieTicketService - Fetching ticket id: 1
+2026-06-22 10:34:18 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.id=?
+2026-06-22 10:34:44 [INFO ] c.x.service.AuthService - Login attempt — username: Kumar
+2026-06-22 10:34:44 [DEBUG] org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.name,
+        u1_0.password,
+        u1_0.is_subscribed,
+        u1_0.subscribed_at,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-06-22 10:34:44 [WARN ] c.x.service.AuthService - Login failed — no such username: Kumar
+2026-06-22 10:34:44 [WARN ] c.x.e.GlobalExceptionHandler - Login failed — Invalid username or password.
+2026-06-22 10:34:44 [WARN ] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.xtraseats.exception.InvalidCredentialsException: Invalid username or password.]
+2026-06-22 10:34:55 [INFO ] c.x.service.AuthService - Register attempt — username: Kumar
+2026-06-22 10:34:55 [DEBUG] org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.username=? 
+    limit
+        ?
+2026-06-22 10:34:55 [DEBUG] org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (created_at, name, password, is_subscribed, subscribed_at, username) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-06-22 10:34:55 [INFO ] c.x.service.AuthService - User registered — id: 4, username: Kumar
+2026-06-22 10:34:56 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets — city filter: null
+2026-06-22 10:34:56 [INFO ] c.x.s.MovieTicketService - Fetching all active tickets
+2026-06-22 10:34:56 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.active=true
+2026-06-22 10:34:56 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets — city filter: null
+2026-06-22 10:34:56 [INFO ] c.x.s.MovieTicketService - Fetching all active tickets
+2026-06-22 10:34:56 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.active=true
+2026-06-22 10:35:03 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets/1
+2026-06-22 10:35:03 [INFO ] c.x.s.MovieTicketService - Fetching ticket id: 1
+2026-06-22 10:35:03 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.id=?
+2026-06-22 10:35:03 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets/1
+2026-06-22 10:35:03 [INFO ] c.x.s.MovieTicketService - Fetching ticket id: 1
+2026-06-22 10:35:03 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.id=?
+2026-06-22 10:37:01 [DEBUG] c.x.c.MovieTicketController - POST /api/tickets — movie: Obsession
+2026-06-22 10:37:01 [INFO ] c.x.s.MovieTicketService - Posting ticket — movie: 'Obsession', city: 'Coimbatore', theatre: 'INOX'
+2026-06-22 10:37:01 [DEBUG] org.hibernate.SQL - 
+    insert 
+    into
+        movie_tickets
+        (active, city, extra_info, language, movie_name, posted_at, price_per_seat, screen_format, screen_number, seat_numbers, seller_contact, seller_name, seller_note, show_date, show_time, theatre_name, ticket_count) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-06-22 10:37:01 [INFO ] c.x.s.MovieTicketService - Ticket posted successfully — id: 2
+2026-06-22 10:37:03 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets — city filter: null
+2026-06-22 10:37:03 [INFO ] c.x.s.MovieTicketService - Fetching all active tickets
+2026-06-22 10:37:03 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.active=true
+2026-06-22 10:37:03 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets — city filter: null
+2026-06-22 10:37:03 [INFO ] c.x.s.MovieTicketService - Fetching all active tickets
+2026-06-22 10:37:03 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.active=true
+2026-06-22 10:37:05 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets — city filter: Coimbatore
+2026-06-22 10:37:05 [INFO ] c.x.s.MovieTicketService - Fetching tickets for city: Coimbatore
+2026-06-22 10:37:05 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.city=? 
+        and mt1_0.active=true
+2026-06-22 10:37:07 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets — city filter: Chennai
+2026-06-22 10:37:07 [INFO ] c.x.s.MovieTicketService - Fetching tickets for city: Chennai
+2026-06-22 10:37:07 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.city=? 
+        and mt1_0.active=true
+2026-06-22 10:37:09 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets — city filter: Coimbatore
+2026-06-22 10:37:09 [INFO ] c.x.s.MovieTicketService - Fetching tickets for city: Coimbatore
+2026-06-22 10:37:09 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.city=? 
+        and mt1_0.active=true
+2026-06-22 10:37:12 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets/2
+2026-06-22 10:37:12 [INFO ] c.x.s.MovieTicketService - Fetching ticket id: 2
+2026-06-22 10:37:12 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.id=?
+2026-06-22 10:37:12 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets/2
+2026-06-22 10:37:12 [INFO ] c.x.s.MovieTicketService - Fetching ticket id: 2
+2026-06-22 10:37:12 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.id=?
+2026-06-22 10:37:15 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets — city filter: null
+2026-06-22 10:37:15 [INFO ] c.x.s.MovieTicketService - Fetching all active tickets
+2026-06-22 10:37:15 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.active=true
+2026-06-22 10:37:15 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets — city filter: null
+2026-06-22 10:37:15 [INFO ] c.x.s.MovieTicketService - Fetching all active tickets
+2026-06-22 10:37:15 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.active=true
+2026-06-22 10:37:18 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets/1
+2026-06-22 10:37:18 [INFO ] c.x.s.MovieTicketService - Fetching ticket id: 1
+2026-06-22 10:37:18 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.id=?
+2026-06-22 10:37:18 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets/1
+2026-06-22 10:37:18 [INFO ] c.x.s.MovieTicketService - Fetching ticket id: 1
+2026-06-22 10:37:18 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.id=?
+2026-06-22 10:37:29 [DEBUG] c.x.c.PaymentController - POST /api/payment — userId: 4, amount: 30.0
+2026-06-22 10:37:29 [INFO ] c.x.service.UserService - Processing Rs.30 payment — userId: 4
+2026-06-22 10:37:29 [DEBUG] org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.name,
+        u1_0.password,
+        u1_0.is_subscribed,
+        u1_0.subscribed_at,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-06-22 10:37:29 [DEBUG] org.hibernate.SQL - 
+    update
+        users 
+    set
+        created_at=?,
+        name=?,
+        password=?,
+        is_subscribed=?,
+        subscribed_at=?,
+        username=? 
+    where
+        id=?
+2026-06-22 10:37:29 [INFO ] c.x.service.UserService - Payment complete — user id: 4 is now subscribed
+2026-06-22 10:37:31 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets/1
+2026-06-22 10:37:31 [INFO ] c.x.s.MovieTicketService - Fetching ticket id: 1
+2026-06-22 10:37:31 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.id=?
+2026-06-22 10:37:31 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets/1
+2026-06-22 10:37:31 [INFO ] c.x.s.MovieTicketService - Fetching ticket id: 1
+2026-06-22 10:37:31 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.id=?
+2026-06-22 10:37:31 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets/1/contact — userId: 4
+2026-06-22 10:37:31 [INFO ] c.x.s.MovieTicketService - Contact request — ticket: 1, user: 4
+2026-06-22 10:37:31 [DEBUG] org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.name,
+        u1_0.password,
+        u1_0.is_subscribed,
+        u1_0.subscribed_at,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-06-22 10:37:31 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.id=?
+2026-06-22 10:37:31 [INFO ] c.x.s.MovieTicketService - Contact revealed — ticket: 1 to user: 4
+2026-06-22 10:37:31 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets/1/contact — userId: 4
+2026-06-22 10:37:31 [INFO ] c.x.s.MovieTicketService - Contact request — ticket: 1, user: 4
+2026-06-22 10:37:31 [DEBUG] org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.name,
+        u1_0.password,
+        u1_0.is_subscribed,
+        u1_0.subscribed_at,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-06-22 10:37:31 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.id=?
+2026-06-22 10:37:31 [INFO ] c.x.s.MovieTicketService - Contact revealed — ticket: 1 to user: 4
+2026-06-22 10:37:37 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets — city filter: null
+2026-06-22 10:37:37 [INFO ] c.x.s.MovieTicketService - Fetching all active tickets
+2026-06-22 10:37:37 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.active=true
+2026-06-22 10:37:37 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets — city filter: null
+2026-06-22 10:37:37 [INFO ] c.x.s.MovieTicketService - Fetching all active tickets
+2026-06-22 10:37:37 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.active=true
+2026-06-22 10:37:40 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets/2
+2026-06-22 10:37:40 [INFO ] c.x.s.MovieTicketService - Fetching ticket id: 2
+2026-06-22 10:37:40 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.id=?
+2026-06-22 10:37:40 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets/2
+2026-06-22 10:37:40 [INFO ] c.x.s.MovieTicketService - Fetching ticket id: 2
+2026-06-22 10:37:40 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.id=?
+2026-06-22 10:37:40 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets/2/contact — userId: 4
+2026-06-22 10:37:40 [INFO ] c.x.s.MovieTicketService - Contact request — ticket: 2, user: 4
+2026-06-22 10:37:40 [DEBUG] org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.name,
+        u1_0.password,
+        u1_0.is_subscribed,
+        u1_0.subscribed_at,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-06-22 10:37:40 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.id=?
+2026-06-22 10:37:40 [INFO ] c.x.s.MovieTicketService - Contact revealed — ticket: 2 to user: 4
+2026-06-22 10:37:40 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets/2/contact — userId: 4
+2026-06-22 10:37:40 [INFO ] c.x.s.MovieTicketService - Contact request — ticket: 2, user: 4
+2026-06-22 10:37:40 [DEBUG] org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.name,
+        u1_0.password,
+        u1_0.is_subscribed,
+        u1_0.subscribed_at,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-06-22 10:37:40 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.id=?
+2026-06-22 10:37:40 [INFO ] c.x.s.MovieTicketService - Contact revealed — ticket: 2 to user: 4
+2026-06-22 10:37:46 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets — city filter: null
+2026-06-22 10:37:46 [INFO ] c.x.s.MovieTicketService - Fetching all active tickets
+2026-06-22 10:37:46 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.active=true
+2026-06-22 10:37:46 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets — city filter: null
+2026-06-22 10:37:46 [INFO ] c.x.s.MovieTicketService - Fetching all active tickets
+2026-06-22 10:37:46 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.active=true
+2026-06-22 10:38:09 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets — city filter: null
+2026-06-22 10:38:09 [INFO ] c.x.s.MovieTicketService - Fetching all active tickets
+2026-06-22 10:38:09 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.active=true
+2026-06-22 10:38:09 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets — city filter: null
+2026-06-22 10:38:09 [INFO ] c.x.s.MovieTicketService - Fetching all active tickets
+2026-06-22 10:38:09 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.active=true
+2026-06-22 10:38:51 [INFO ] c.x.service.AuthService - Register attempt — username: Lithya
+2026-06-22 10:38:51 [DEBUG] org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.username=? 
+    limit
+        ?
+2026-06-22 10:38:51 [DEBUG] org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (created_at, name, password, is_subscribed, subscribed_at, username) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-06-22 10:38:51 [INFO ] c.x.service.AuthService - User registered — id: 5, username: Lithya
+2026-06-22 10:38:52 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets — city filter: null
+2026-06-22 10:38:52 [INFO ] c.x.s.MovieTicketService - Fetching all active tickets
+2026-06-22 10:38:52 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.active=true
+2026-06-22 10:38:52 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets — city filter: null
+2026-06-22 10:38:52 [INFO ] c.x.s.MovieTicketService - Fetching all active tickets
+2026-06-22 10:38:52 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.active=true
+2026-06-22 10:39:22 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets — city filter: Chennai
+2026-06-22 10:39:22 [INFO ] c.x.s.MovieTicketService - Fetching tickets for city: Chennai
+2026-06-22 10:39:22 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.city=? 
+        and mt1_0.active=true
+2026-06-22 10:39:24 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets — city filter: Coimbatore
+2026-06-22 10:39:24 [INFO ] c.x.s.MovieTicketService - Fetching tickets for city: Coimbatore
+2026-06-22 10:39:24 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.city=? 
+        and mt1_0.active=true
+2026-06-22 10:41:26 [DEBUG] c.x.c.MovieTicketController - POST /api/tickets — movie: Karuppu
+2026-06-22 10:41:26 [INFO ] c.x.s.MovieTicketService - Posting ticket — movie: 'Karuppu', city: 'Bangalore', theatre: 'IMAX'
+2026-06-22 10:41:27 [DEBUG] org.hibernate.SQL - 
+    insert 
+    into
+        movie_tickets
+        (active, city, extra_info, language, movie_name, posted_at, price_per_seat, screen_format, screen_number, seat_numbers, seller_contact, seller_name, seller_note, show_date, show_time, theatre_name, ticket_count) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-06-22 10:41:27 [INFO ] c.x.s.MovieTicketService - Ticket posted successfully — id: 3
+2026-06-22 10:41:29 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets — city filter: null
+2026-06-22 10:41:29 [INFO ] c.x.s.MovieTicketService - Fetching all active tickets
+2026-06-22 10:41:29 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.active=true
+2026-06-22 10:41:29 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets — city filter: null
+2026-06-22 10:41:29 [INFO ] c.x.s.MovieTicketService - Fetching all active tickets
+2026-06-22 10:41:29 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.active=true
+2026-06-22 10:41:33 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets — city filter: Chennai
+2026-06-22 10:41:33 [INFO ] c.x.s.MovieTicketService - Fetching tickets for city: Chennai
+2026-06-22 10:41:33 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.city=? 
+        and mt1_0.active=true
+2026-06-22 10:41:35 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets — city filter: Coimbatore
+2026-06-22 10:41:35 [INFO ] c.x.s.MovieTicketService - Fetching tickets for city: Coimbatore
+2026-06-22 10:41:35 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.city=? 
+        and mt1_0.active=true
+2026-06-22 10:41:37 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets — city filter: Bangalore
+2026-06-22 10:41:37 [INFO ] c.x.s.MovieTicketService - Fetching tickets for city: Bangalore
+2026-06-22 10:41:37 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.city=? 
+        and mt1_0.active=true
+2026-06-22 10:41:40 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets — city filter: Trichy
+2026-06-22 10:41:40 [INFO ] c.x.s.MovieTicketService - Fetching tickets for city: Trichy
+2026-06-22 10:41:40 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.city=? 
+        and mt1_0.active=true
+2026-06-22 10:41:43 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets — city filter: Delhi
+2026-06-22 10:41:43 [INFO ] c.x.s.MovieTicketService - Fetching tickets for city: Delhi
+2026-06-22 10:41:43 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.city=? 
+        and mt1_0.active=true
+2026-06-22 10:41:45 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets — city filter: Chennai
+2026-06-22 10:41:45 [INFO ] c.x.s.MovieTicketService - Fetching tickets for city: Chennai
+2026-06-22 10:41:45 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.city=? 
+        and mt1_0.active=true
+2026-06-22 10:41:47 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets — city filter: null
+2026-06-22 10:41:47 [INFO ] c.x.s.MovieTicketService - Fetching all active tickets
+2026-06-22 10:41:47 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.active=true
+2026-06-22 10:44:48 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets — city filter: null
+2026-06-22 10:44:48 [INFO ] c.x.s.MovieTicketService - Fetching all active tickets
+2026-06-22 10:44:48 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.active=true
+2026-06-22 10:44:48 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets — city filter: null
+2026-06-22 10:44:48 [INFO ] c.x.s.MovieTicketService - Fetching all active tickets
+2026-06-22 10:44:48 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.active=true
+2026-06-22 10:45:08 [WARN ] c.z.h.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m3s181ms562µs800ns).
+2026-06-22 10:48:39 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets — city filter: null
+2026-06-22 10:48:39 [INFO ] c.x.s.MovieTicketService - Fetching all active tickets
+2026-06-22 10:48:39 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.active=true
+2026-06-22 10:48:39 [DEBUG] c.x.c.MovieTicketController - GET /api/tickets — city filter: null
+2026-06-22 10:48:39 [INFO ] c.x.s.MovieTicketService - Fetching all active tickets
+2026-06-22 10:48:39 [DEBUG] org.hibernate.SQL - 
+    select
+        mt1_0.id,
+        mt1_0.active,
+        mt1_0.city,
+        mt1_0.extra_info,
+        mt1_0.language,
+        mt1_0.movie_name,
+        mt1_0.posted_at,
+        mt1_0.price_per_seat,
+        mt1_0.screen_format,
+        mt1_0.screen_number,
+        mt1_0.seat_numbers,
+        mt1_0.seller_contact,
+        mt1_0.seller_name,
+        mt1_0.seller_note,
+        mt1_0.show_date,
+        mt1_0.show_time,
+        mt1_0.theatre_name,
+        mt1_0.ticket_count 
+    from
+        movie_tickets mt1_0 
+    where
+        mt1_0.active=true
+2026-06-22 10:48:40 [WARN ] c.z.h.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m2s383ms87µs300ns).
+2026-06-22 10:56:16 [INFO ] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2026-06-22 10:56:16 [INFO ] o.s.b.t.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-22 10:56:16 [INFO ] o.s.b.t.GracefulShutdown - Graceful shutdown complete
+2026-06-22 10:56:16 [INFO ] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-22 10:56:16 [INFO ] c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-06-22 10:56:16 [INFO ] c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
